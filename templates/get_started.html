@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Templates
+{% endblock %}
+
+{% block main %}
+    <h3>
+    CV Templates
+    <small class="text-body-secondary">- Choose one, and let's get started!</small>
+    </h3>
+    <div align="center">
+        <form method="post" action="/choose_template">
+            <label for="template" class="form-label mt-4">Select:</label>
+            <select class="form-select" id="template" name="template">
+                <option value="template_1">Template 1</option>
+                <option value="template_2">Template 2</option>
+            </select>
+            <br><button type="submit" class="btn btn-primary">Select Template</button>
+        </form>
+    </div>
+    <br><br>
+    <div align="center">
+        <h3>Template 1 / Template 2</h3>
+        <img src="static/1.PNG" alt="template 1">
+        <img src="static/2.PNG" alt="template 2">
+    </div>
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips - Languages
+{% endblock %}
+
+{% block main %}
+    <h4>Languages</h4><br>
+    <p>The "Languages" section of your resume provides information about the languages you're proficient in, which can be particularly important in a globalized and diverse work environment. Here's how to elaborate on each element:</p>
+    <ol>
+        <li><strong>Language:</strong> Mention the language(s) you're skilled in.</li>
+        <li><strong>Proficiency Level:</strong> Indicate your proficiency level, such as "Fluent," "Intermediate," or "Basic."</li>
+        <li><strong>Context (Optional):</strong>  If applicable, you can mention situations where you've used the language or any specific contexts in which you're comfortable using it.</li>
+    </ol>
+
+    <div>
+        <h4>Examples:</h4>
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="static/lan1.PNG" style="width:50%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 4</div>
+              <img src="static/lan2.PNG" style="width:50%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 4</div>
+              <img src="static/lan3.PNG" style="width:50%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="static/lan4.PNG" style="width:50%">
+              </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+
+    <p>Highlighting your language skills can be advantageous, especially if the job involves international communication, collaborations, or requires interaction with diverse groups of people. It demonstrates your adaptability and potential to work effectively across different linguistic backgrounds.</p>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+{% endblock %}

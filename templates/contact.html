@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips - Contact
+{% endblock %}
+
+{% block main %}
+    <h4>Contact Information</h4><br>
+    <p>The "Contact Information" section of your resume provides essential details for employers to get in touch with you. This section is typically placed at the top of your resume and should be easily visible. Here's how to elaborate on each element:</p>
+    <ol>
+        <li><strong>Full Name:</strong> Your full legal name is the most important element. Use the name you commonly go by professionally.</li>
+        <li><strong>Phone Number:</strong> Include a reliable phone number where potential employers can reach you. Make sure it's accurate and has a professional voicemail.</li>
+        <li><strong>Email Address:</strong> Use a professional email address that includes your name, like <em>firstname.lastname@email.com</em>. Avoid using overly casual or unrelated email addresses.</li>
+        <li><strong>Location:</strong> Include your current city and state. If you're open to relocation, you can add "Willing to relocate" or indicate your preferred relocation areas.</li>
+        <li><strong>LinkedIn Profile (Optional):</strong> If you have a professional LinkedIn profile, you can include the URL. Ensure your LinkedIn profile is up-to-date and aligns with your resume.</li>
+        <li><strong>Portfolio/Website (Optional):</strong> If you have a personal website or online portfolio showcasing your work, you can include the URL here. This is particularly useful for creative or technical professions.</li>
+    </ol>
+
+    <div>
+        <h4>Examples:</h4>
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 3</div>
+              <img src="static/contact.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 3</div>
+              <img src="static/contact2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 3</div>
+              <img src="static/contact3.PNG" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <p>The "Contact Information" section is your first impression on potential employers, so make sure it's accurate, professional, and easy to read. Avoid sharing overly personal information like your home address or sensitive personal social media profiles.</p>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+{% endblock %}

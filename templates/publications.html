@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips - Publications
+{% endblock %}
+
+{% block main %}
+    <h4>Publications</h4><br>
+    <p>The "Publications" section of your resume allows you to highlight any research papers, articles, or publications you've authored or co-authored. This section can demonstrate your expertise, contributions to your field, and your ability to communicate complex ideas effectively. Here's how to elaborate on each element:</p>
+    <ol>
+        <li><strong>Publication Title:</strong> Provide the title of the publication.</li>
+        <li><strong>Co-Authors (if applicable):</strong> If you collaborated with others on the publication, mention their names.</li>
+        <li><strong>Publication Date:</strong> Include the publication date or the year it was published.</li>
+        <li><strong>Journal or Venue:</strong> Mention the journal, conference, or platform where the publication was featured.</li>
+        <li><strong>Description (Optional):</strong>  Provide a brief overview of the publication's content, focus, or findings.</li>
+    </ol>
+
+    <div>
+        <h4>Example:</h4>
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 3</div>
+              <img src="static/pro1.PNG" style="width:40%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 3</div>
+              <img src="static/pro2.PNG" style="width:40%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 3</div>
+              <img src="static/pro3.PNG" style="width:80%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <p>Including your publications on your resume highlights your expertise and contributions to your field, making you a more credible candidate, especially in research-intensive or academic positions.</p>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+{% endblock %}

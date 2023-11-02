@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips - Education
+{% endblock %}
+
+{% block main %}
+    <h4>Education</h4><br>
+    <p>The "Education" section of your resume provides information about your academic background and qualifications. This section is important as it helps employers understand your educational achievements and the foundation of your knowledge. Here's how to elaborate on each element:</p>
+    <ol>
+        <li><strong>Degree Earned:</strong> Include the degree you earned (e.g., Bachelor of Science, Master of Engineering) and the field of study (e.g., Bioengineering).</li>
+        <li><strong>Institution:</strong> List the name of the university or college where you earned your degree.</li>
+        <li><strong>Location and Date:</strong> Include the city and state (or country, if outside the U.S.) of the institution, as well as the graduation date or expected graduation date.</li>
+        <li><strong>Honors and Achievements (Optional):</strong> If you graduated with honors or received any academic awards, you can include them here.</li>
+        <li><strong>Relevant Coursework (Optional):</strong> If you're a recent graduate or your coursework is particularly relevant to the job you're applying for, you can list a few key courses.</li>
+    </ol>
+
+    <div>
+        <h4>Example:</h4>
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 3</div>
+              <img src="static/ed1.PNG" style="width:50%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 3</div>
+              <img src="static/ed2.PNG" style="width:50%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 3</div>
+              <img src="static/ed3.PNG" style="width:50%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <p>The "Education" section showcases your academic achievements and demonstrates your qualifications for the role you're pursuing. Be sure to list your most recent or relevant education first and consider leaving out high school information if you have a college degree.</p>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+{% endblock %}

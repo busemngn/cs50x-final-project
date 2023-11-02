@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips - References
+{% endblock %}
+
+{% block main %}
+    <h4>References</h4><br>
+    <p>The "References" section of your resume indicates that you're willing to provide professional references upon request. This section is often kept concise, as employers typically ask for references at a later stage in the hiring process. Here's how to elaborate on this section:</p>
+    <ol>
+        <li><strong>References Available Upon Request:</strong> Simply include the phrase "References available upon request" at the end of your resume.</li>
+    </ol>
+
+    <div>
+        <h4>Example:</h4>
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 3</div>
+              <img src="static/ref1.PNG" style="width:50%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 3</div>
+              <img src="static/ref2.PNG" style="width:50%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 3</div>
+              <img src="static/ref3.PNG" style="width:80%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <p>Keep in mind that adding references can take up valuable space on your CV, and it's generally recommended to keep your CV concise. If space is a concern or if you have a longer list of references, you can mention that references are available upon request.<hr> By including this section, you show that you're prepared to provide references when needed without cluttering your resume with detailed contact information for your referees. If an employer is interested in your candidacy, they will ask you for references separately. Make sure you have your references lined up and ready to provide their information when requested.</p>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+{% endblock %}

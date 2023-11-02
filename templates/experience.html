@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips - Experience
+{% endblock %}
+
+{% block main %}
+
+    <h4>Work Experience</h4><br>
+    <p>The "Work Experience" section of your resume provides detailed information about your previous employment, showcasing your professional journey, responsibilities, and accomplishments. Here's how to elaborate on each element:</p>
+    <ol>
+        <li><strong>Job Title:</strong> Mention your job title for each position you held.</li>
+        <li><strong>Company Name:</strong> Provide the name of the company or organization where you worked.</li>
+        <li><strong>Location and Dates:</strong> Include the city and state (or country) of the company's location, as well as the dates you were employed (start and end dates).</li>
+        <li><strong>Description of Responsibilities:</strong> Outline your main responsibilities and tasks in bullet points. Use action verbs to start each point and focus on quantifiable achievements.</li>
+        <li><strong>Achievements and Accomplishments:</strong> Highlight any significant accomplishments during your tenure. Use metrics or data to quantify your impact whenever possible.</li>
+        <li><strong>Skills Used:</strong> Mention the technical and soft skills you utilized in the role.</li>
+        <li><strong>Projects or Initiatives (Optional):</strong> If applicable, include any projects you led or were involved in, along with their outcomes.</li>
+    </ol>
+
+    <div>
+        <h4>Example:</h4>
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 3</div>
+              <img src="static/exp1.PNG" style="width:50%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 3</div>
+              <img src="static/exp2.PNG" style="width:70%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 3</div>
+              <img src="static/exp3.PNG" style="width:70%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <p>The "Work Experience" section provides evidence of your skills, accomplishments, and contributions to your previous employers. Focus on showcasing your impact and how your work benefited the company or team.</p>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+{% endblock %}
