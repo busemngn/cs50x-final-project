@@ -1,5 +1,4 @@
 # GREAT JOB RESUME BUILDER
-#### Video Demo:  <https://youtu.be/CKHfE0mrEoo>
 ## Description:
 This website was created with a personal touch, born from the perspective of someone standing at the threshold of a job application. While exploring existing resume builder sites, I quickly realized that they often fell short in providing comprehensive guidance on resume sections. Many offered little more than templates, leaving job seekers searching for tips, examples, and insights across various tabs as they meticulously constructed their resumes.
 Additionally, I noticed that the online resources available for resume building were often overly detailed, causing information overload. This realization drove me to embark on a mission: to create a resume builder site that not only offers beautifully designed templates but also serves as a wellspring of advice, best practices, and real-world examples for each resume section.
@@ -28,3 +27,5 @@ This file contains the references, websites that inspired and helped me, and my 
 These JavaScript files are responsible for managing client-side functionality and user input validation. It defines various regular expressions for form field validation, such as validating names, emails, phone numbers, and more. The script interacts with the HTML forms, capturing user inputs and ensuring they meet specific validation criteria. Additionally, it includes functions to display and print the generated resume based on the user's input. Overall, app.js and app2.js play a crucial role in providing a smooth user experience by validating data and rendering the resume preview.
 ### 'script.js':
 This file is responsible for managing the form repeater functionality in my web application. It uses the jQuery library to handle form field repetition. This script enhances my web application's form handling capabilities by allowing users to dynamically add and remove form field sets. It also triggers the generateCV() function to update the CV preview whenever a field is added or removed.
+
+#### Video Demo:  <https://youtu.be/CKHfE0mrEoo>
