@@ -28,4 +28,3 @@ These JavaScript files are responsible for managing client-side functionality an
 ### 'script.js':
 This file is responsible for managing the form repeater functionality in my web application. It uses the jQuery library to handle form field repetition. This script enhances my web application's form handling capabilities by allowing users to dynamically add and remove form field sets. It also triggers the generateCV() function to update the CV preview whenever a field is added or removed.
 
-#### Video Demo:  <https://youtu.be/CKHfE0mrEoo>
