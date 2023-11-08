@@ -1,4 +1,5 @@
 # GREAT JOB RESUME BUILDER
+#### Video Demo : <https://www.youtube.com/watch?v=cWf0vpr-q3o>
 ## Description:
 This website was created with a personal touch, born from the perspective of someone standing at the threshold of a job application. While exploring existing resume builder sites, I quickly realized that they often fell short in providing comprehensive guidance on resume sections. Many offered little more than templates, leaving job seekers searching for tips, examples, and insights across various tabs as they meticulously constructed their resumes.
 Additionally, I noticed that the online resources available for resume building were often overly detailed, causing information overload. This realization drove me to embark on a mission: to create a resume builder site that not only offers beautifully designed templates but also serves as a wellspring of advice, best practices, and real-world examples for each resume section.
